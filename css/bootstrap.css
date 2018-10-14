@@ -66,6 +66,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
+  padding: 1rem;
 }
 
 [tabindex="-1"]:focus {
@@ -79,6 +80,7 @@ hr {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: #004E87;
   font-family: 'Merriweather', serif;
   font-weight: 900;
   margin-top: 0;
@@ -203,12 +205,14 @@ pre {
 }
 
 figure {
-  margin: 0 0 1rem;
+  margin: 1rem 1rem;
+  max-width="device-width";
 }
 
 img {
   vertical-align: middle;
   border-style: none;
+  max-width="device-width";
 }
 
 svg {
@@ -363,9 +367,8 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-weight: 500;
+  font-weight: 900;
   line-height: 1.2;
-  color: inherit;
 }
 
 h1, .h1 {
@@ -9028,3 +9031,15 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+/* My code */
+
+.byline {
+  color: #71B8E5;
+  font-size: 1rem;
+}
+
+.dateline {
+  color: #888888;
+  font-size: .75rem;
+}
