@@ -222,7 +222,7 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
-  max-width: 100%;
+  width: 100%;
 }
 
 svg {
@@ -562,11 +562,18 @@ pre code {
 
 .container {
   width: 100%;
+  height: auto;
   margin-right: auto;
   margin-left: auto;
   position: relative;
-  text-align: center;
-  color: white;
+  background:
+   /* top, transparent red, faked with gradient */
+   linear-gradient(
+     rgba(0, 0, 0, 0),
+     rgba(0, 0, 0, 1)
+   ),
+   /* bottom, image */
+    url(https://image.ibb.co/j1tekf/ct-met-lakefront-bike-path-shooting-20181002.jpg);
 }
 
 @media (min-width: 576px) {
@@ -1532,13 +1539,14 @@ pre code {
   width: 100%;
   margin-bottom: 1rem;
   background-color: transparent;
+  align-items: middle;
 }
 
 .table th,
 .table td {
-  padding: 0.75rem;
-  vertical-align: top;
-  border-top: 1px solid #dee2e6;
+  padding: .25rem;
+  vertical-align: middle;
+  border-top: 1px solid #fff;
 }
 
 .table thead th {
@@ -9103,21 +9111,9 @@ a.text-dark:hover, a.text-dark:focus {
   font-weight: 500;
   font-size: 1.75rem;
   text-align: left;
-}
-
-.tinted-image {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background:
-    /* top, transparent red, faked with gradient */
-    linear-gradient(
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 1)
-    ),
-    /* bottom, image */
-    url(https://image.ibb.co/f9k8T0/ct-crime-spree-vigil-rogers-park-photos-201810-004.jpg);
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0);
+    , rgba(0, 0, 0, 1))
 }
 
 .pullquote {
