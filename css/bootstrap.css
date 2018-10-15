@@ -53,10 +53,15 @@ html {
   width: device-width;
 }
 
-article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+article, aside, footer, header, hgroup, main, nav, section {
   display: block;
+  padding: 1rem;
 }
 
+figcaption {
+  padding: .25rem .5rem 1rem;
+  font-size: .75rem;
+}
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
@@ -66,7 +71,6 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
-  padding: 1rem;
 }
 
 [tabindex="-1"]:focus {
@@ -79,12 +83,18 @@ hr {
   overflow: visible;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
   color: #004E87;
   font-family: 'Merriweather', serif;
-  font-weight: 900;
+  font-weight: 500;
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: .75rem;
+}
+
+h1 {
+  color: #fff;
+  font-family: 'Merriweather', serif;
+  font-weight: 500;
 }
 
 p {
@@ -94,7 +104,7 @@ p {
 
 abbr[title],
 abbr[data-original-title] {
-  text-decoration: underline;
+
   -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
@@ -205,14 +215,14 @@ pre {
 }
 
 figure {
-  margin: 1rem 1rem;
+  margin: 0 0;
   max-width="device-width";
 }
 
 img {
   vertical-align: middle;
   border-style: none;
-  max-width="device-width";
+  width: 100%;
 }
 
 svg {
@@ -366,13 +376,13 @@ template {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  margin-bottom: 0.5rem;
-  font-weight: 900;
+  margin-bottom: 1rem;
+  font-weight: 500;
   line-height: 1.2;
 }
 
 h1, .h1 {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
 }
 
 h2, .h2 {
@@ -552,10 +562,18 @@ pre code {
 
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  height: auto;
   margin-right: auto;
   margin-left: auto;
+  position: relative;
+  background:
+   /* top, transparent red, faked with gradient */
+   linear-gradient(
+     rgba(0, 0, 0, .5),
+     rgba(0, 0, 0, 1)
+   ),
+   /* bottom, image */
+    url(https://image.ibb.co/j1tekf/ct-met-lakefront-bike-path-shooting-20181002.jpg);
 }
 
 @media (min-width: 576px) {
@@ -1521,13 +1539,14 @@ pre code {
   width: 100%;
   margin-bottom: 1rem;
   background-color: transparent;
+  align-items: middle;
 }
 
 .table th,
 .table td {
-  padding: 0.75rem;
-  vertical-align: top;
-  border-top: 1px solid #dee2e6;
+  padding: .25rem;
+  vertical-align: middle;
+  border-top: 1px solid #fff;
 }
 
 .table thead th {
@@ -2337,14 +2356,12 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #EA4335;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #0069d9;
-  border-color: #0062cc;
+  background-color: #c40000;
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -2881,12 +2898,12 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #007bff;
+  color: #fff;
   background-color: transparent;
 }
 
 .btn-link:hover {
-  color: #0056b3;
+  color: #fff;
   text-decoration: underline;
   background-color: transparent;
   border-color: transparent;
@@ -2899,7 +2916,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-link:disabled, .btn-link.disabled {
-  color: #6c757d;
+  color: #fff;
   pointer-events: none;
 }
 
@@ -9035,11 +9052,70 @@ a.text-dark:hover, a.text-dark:focus {
 /* My code */
 
 .byline {
-  color: #71B8E5;
-  font-size: 1rem;
+  color: #888888;
+  font-size: .75rem;
+  margin-bottom: 0.25rem;
 }
 
 .dateline {
   color: #888888;
   font-size: .75rem;
+  margin-bottom: 1rem;
+}
+
+.bouton-image:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 5px;
+    background-color: transparent;
+    background-position : center center;
+    background-repeat:no-repeat;
+}
+
+.monBouton:before{
+     background-image: url(https://image.ibb.co/mqd91L/iconmonstr-email-2-16.png);
+}
+
+.monBouton a {
+  color: #fff;
+  font-size: 13px;
+}
+
+.monBouton a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.banner {
+  background-color: #0A1129;
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+  color: white;
+  z-index: -1000;
+}
+
+.container img {
+  max-width: 100%;
+  min-width: 100%
+}
+
+.headline {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  color: #fff;
+  font-family: 'Merriweather', serif;
+  font-weight: 500;
+  font-size: 1.75rem;
+  text-align: left;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0);
+    , rgba(0, 0, 0, 1))
+}
+
+.pullquote {
+  margin-bottom: 1rem;
 }
