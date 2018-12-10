@@ -1,0 +1,71 @@
+h1 {
+  font-size: 36px;
+}
+
+img {
+  max-width: 100%;
+}
+
+article {
+
+}
+
+.byline {
+  color: #888888;
+  font-size: .75rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.dateline {
+  color: #888888;
+  font-size: .75rem;
+  margin-bottom: 1rem;
+}
+
+.bouton-image:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 5px;
+    background-color: transparent;
+    background-position : center center;
+    background-repeat:no-repeat;
+}
+
+.monBouton:before{
+     background-image: url(https://image.ibb.co/mqd91L/iconmonstr-email-2-16.png);
+}
+
+.monBouton a {
+  color: #fff;
+  font-size: 13px;
+}
+
+.monBouton a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.headline {
+  color: #fff;
+  font-family: 'Merriweather', serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: left;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1));
+  position: absolute;
+  z-index: 2;
+}
+
+.pullquote {
+  margin-bottom: 1rem;
+}
+
+figure {
+  max-width: 100%;
+
+}
